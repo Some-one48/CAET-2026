@@ -10,7 +10,13 @@
 
 <body>
     <!-- HEADER comum para todas as páginas -->
-    <iframe href="header.html" width="100%" height="200"></iframe>
+    <header>
+        <img src="static/logo-white.png" style="max-height: 100px; margin-right: 10px;">
+        <div>
+        <h1>Educação Ambiental e Tecnologia</h1>
+        <h4>CAET 2026 - 1º TII</h4>
+        </div>
+    </header>
 
     <main>
         <nav>
@@ -19,9 +25,35 @@
                 <li><a>Tópico 2</a></li>
             </ul>
         </nav>
+
+        <div id="any-"></div>
+	<div style="max-width: 600px;">
+		<div id="br_mine"></div>
+	</div>
+	
+	<script src="mapa.js"></script>
+	
+	<script>
+		BrMap.Draw({
+			wrapper: '#br_mine', 
+			selectStates: ['es'],
+			callbacks: {
+				click: (element, uf) => { alert(uf); },
+				/*mouseover: (element, uf) => { 
+					document.querySelector("#any-").appendChild(document.createTextNode(uf+" "));
+				},*/
+			}
+		});
+	</script>
     </main>
 
     <!-- FOOTER comum para todas as páginas -->
-    <iframe src="footer.html" width="100%" height="100"></iframe>
+    <footer>
+        <p>Desenvolvido por:</p>
+        <ul class="fa-ul">
+            <li>Hadassa Favari de Moraes</li>
+            <li>Fulano</li>
+        </ul>
+    </footer>
 </body>
 </html>
