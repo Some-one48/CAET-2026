@@ -35,3 +35,7 @@ li{
     margin-left: 0;
     padding: 0;
 }
+
+.state{
+    text-decoration: none;
+}
