@@ -1,31 +1,147 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!--
+ESTE É UM CÓDIGO QUE EU ACHEI PRA FAZER A BARRA DE NAVEGAÇÃO
+FICAR ENCOLHIDA EM UM CELULAR
+
+((pq eu escrevi em capslock?))
+-->
+
+
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
-<title>Brazil SVG</title>
+    <title>Menu Responsivo</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>       
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+/*Estilização do site (inicio)*/
+html,body{
+    overflow-x: hidden;
+    height: 100%;
+}
+img{
+    width: 100%;
+}
+.center{
+    max-width: 1280px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+/*Estilização do site (fim)*/
+header{
+    padding: 10px 0;
+    background: rgb(104, 207, 255);
+}
+.logosite{
+    width: 65px;
+    height: 65px;
+}
+.mobile{
+    display: none;
+}
+nav.desktop ul{
+    position: relative;
+    margin-top: 20px;
+    list-style-type: none;
+}
+nav.desktop li{
+    font-size: 15px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+nav.desktop a{
+    color: black;
+    text-decoration: none;
+}
+nav.desktop a:hover{
+    text-decoration: underline;
+}
+@media screen and (max-width: 700px){
+    nav.desktop{
+        display: none;
+    }
+    nav.mobile{
+        display: block;
+    }
+    .botao-menu-mobile{
+        font-size: 45px;
+        cursor: pointer;
+        color: black;
+    }
+    nav.mobile ul{
+        top: 80px;
+        z-index: 3;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: none;
+        text-align: center;
+    }
+    nav.mobile li{
+        font-weight: 300;
+        width: 100%;
+        display: block;
+        background: white;
+        border-bottom: 1px solid #ccc;
+        font-size: 17px;
+        padding: 8px 0;
+    }
+    nav.mobile li a{
+        display: block;
+        color: #444;
+        text-decoration: none;
+    }
+}
+
+	</style>
 </head>
 <body>
-	
-	<div id="any-"></div>
-	<div style="max-width: 600px;">
-		<div id="br_mine"></div>
-	</div>
-	
-	<script src="teste.js"></script>
-	
-	<script>
-        
-		BrMap.Draw({
-			wrapper: '#br_mine', 
-			selectStates: ['es'],
-			callbacks: {
-				click: (element, uf) => { alert(uf); },
-				/*mouseover: (element, uf) => { 
-					document.querySelector("#any-").appendChild(document.createTextNode(uf+" "));
-				},*/
-			}
-		});
-	</script>
-
+    <header>
+        <div class="center">
+        <div class="logo left"><a href="https://programadoresdepre.com.br">
+            <img class="logosite" src="https://programadoresdepre.com.br/wp-content/uploads/2020/04/cropped-cropped-Logo-ProgDepre-FotoJet.png" alt="logo"></a>            
+        </div><!--logo-->
+        <nav class="desktop right">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Serviços</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile right">
+            <div class="botao-menu-mobile">
+            <i class="fas fa-bars"></i>
+            </div><!--botao-menu-mobile-->
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Serviços</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="clear"></div>
+        </div><!--center-->
+    </header>     
 </body>
 </html>

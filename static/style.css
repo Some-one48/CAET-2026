@@ -1,3 +1,11 @@
+/* Para padronizar entre os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GERAL */
 header, main, footer{
     padding:3%;
 }
@@ -11,10 +19,29 @@ header{
     align-items: center;
 }
 
+nav#home ul{
+    position: relative;
+    margin-top: 20px;
+    list-style-type: none;
+}
+nav#home li{
+    font-size: 15px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
 footer{
     text-align: center;
     background-color: green;
     color: white;
+}
+
+footer ul{
+    list-style-type: none;
+}
+footer li{
+    font-size: 15px;
 }
 
 iframe{
@@ -38,4 +65,9 @@ li{
 
 .state{
     text-decoration: none;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
 }
