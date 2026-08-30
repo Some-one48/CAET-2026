@@ -19,6 +19,12 @@ header{
     align-items: center;
 }
 
+#logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 nav#home ul{
     position: relative;
     margin-top: 20px;
@@ -52,6 +58,7 @@ iframe{
 main{
     padding-top: 0px;
     padding-bottom: 10px;
+    min-height: 100vh;
 }
 
 ul{
