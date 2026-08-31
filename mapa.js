@@ -13,11 +13,11 @@ const BrMap = (() => {
 		wrapper: null,
 		selectStates: [],
 		cssFill: {
-			shape: "#D8D6D6",
+			shape: "#bebbb0",
 			icon_state: "#BBBBBB",
 			label_icon_state: "#777777",
 			label_state: "#FFFFFF",
-			selected: "#BBBBBB"
+			selected: "#2e4332"
 		},
 		responsive: true,
 		width: 500,

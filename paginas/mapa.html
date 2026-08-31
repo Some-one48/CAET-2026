@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/style.css">
-    <title>Slides - CAET TII 2026</title>
+    <title>Mapa - CAET TII 2026</title>
 </head>
 
 <body>
@@ -31,7 +31,25 @@
     </header>
 
     <main>
-        
+        <div id="any-"></div>
+	<div style="max-width: 600px;">
+		<div id="br_mine"></div>
+	</div>
+	
+	<script src="../mapa.js"></script>
+   
+	<script>
+		BrMap.Draw({
+			wrapper: '#br_mine', 
+			selectStates: ['es'],
+			callbacks: {
+				click: (element, uf) => { alert(uf); },
+				/*mouseover: (element, uf) => { 
+					document.querySelector("#any-").appendChild(document.createTextNode(uf+" "));
+				},*/
+			}
+		});
+	</script>
     </main>
    
 
