@@ -1,147 +1,165 @@
-<!--
-ESTE É UM CÓDIGO QUE EU ACHEI PRA FAZER A BARRA DE NAVEGAÇÃO
-FICAR ENCOLHIDA EM UM CELULAR
-
-((pq eu escrevi em capslock?))
--->
-
 
 <html lang="pt-br">
-<head>
-    <title>Menu Responsivo</title>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>       
 
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-*{
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Programadores Deprê</title>
+
+    <style>
+        /* UTILIDADES */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-/*Estilização do site (inicio)*/
-html,body{
-    overflow-x: hidden;
-    height: 100%;
-}
-img{
-    width: 100%;
-}
-.center{
-    max-width: 1280px;
-    padding: 0 2%;
-    margin: 0 auto;
-}
-.left{
-    float: left;
-}
-.right{
-    float: right;
-}
-.clear{
-    clear: both;
-}
-/*Estilização do site (fim)*/
-header{
-    padding: 10px 0;
-    background: rgb(104, 207, 255);
-}
-.logosite{
-    width: 65px;
-    height: 65px;
-}
-.mobile{
-    display: none;
-}
-nav.desktop ul{
-    position: relative;
-    margin-top: 20px;
-    list-style-type: none;
-}
-nav.desktop li{
-    font-size: 15px;
-    padding: 0 30px;
-    text-transform: uppercase;
-    display: inline-block;
-}
-nav.desktop a{
-    color: black;
+   }
+   body {
+    font-family: cursive;
+   }
+   a {
     text-decoration: none;
-}
-nav.desktop a:hover{
-    text-decoration: underline;
-}
-@media screen and (max-width: 700px){
-    nav.desktop{
-        display: none;
-    }
-    nav.mobile{
-        display: block;
-    }
-    .botao-menu-mobile{
-        font-size: 45px;
-        cursor: pointer;
-        color: black;
-    }
-    nav.mobile ul{
-        top: 80px;
-        z-index: 3;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        display: none;
-        text-align: center;
-    }
-    nav.mobile li{
-        font-weight: 300;
-        width: 100%;
-        display: block;
-        background: white;
-        border-bottom: 1px solid #ccc;
-        font-size: 17px;
-        padding: 8px 0;
-    }
-    nav.mobile li a{
-        display: block;
-        color: #444;
-        text-decoration: none;
-    }
-}
+   }
+   li {
+    list-style: none;
+   }
 
-	</style>
+   /* NAVBAR ESTILO */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: teal;
+    color: #fff;
+   }
+   .nav-links a {
+    color: #fff;
+   }
+   /* LOGO */
+   .logo {
+    font-size: 32px;
+   }
+   /* NAVBAR MENU */
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+   }
+   /* MENU SUSPENSO */
+   .services {
+    position: relative; 
+   }
+   .dropdown {
+    background-color: rgb(1, 139, 139);
+    padding: 1em 0;
+    position: absolute; /*COM RELAÇÃO AOS PAIS*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+   }
+   .dropdown li + li {
+    margin-top: 10px;
+   }
+   .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+   }
+   .dropdown li:hover {
+    background-color: #4c9e9e;
+   }
+   .services:hover .dropdown {
+    display: block;
+   }
+
+   /* NAVBAR MENU RESPONSIVA*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+   } 
+   /*HAMBURGER MENU*/
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+   /* APLICAÇÃO MEDIA QUERIES */
+   @media (max-width: 768px) {
+   .menu { 
+    display:none;
+    position: absolute;
+    background-color:teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+   }
+   .menu li:hover {
+    display: inline-block;
+    background-color:#4c9e9e;
+    transition: 0.3s ease;
+   }
+   .menu li + li {
+    margin-top: 12px;
+   }
+   input[type=checkbox]:checked ~ .menu{
+    display: block;
+   }
+   .hamburger {
+    display: block;
+   }
+   .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+   }
+   .dropdown li:hover {
+    background-color: #4c9e9e;
+   }
+   }
+
+    </style>
 </head>
+
 <body>
-    <header>
-        <div class="center">
-        <div class="logo left"><a href="https://programadoresdepre.com.br">
-            <img class="logosite" src="https://programadoresdepre.com.br/wp-content/uploads/2020/04/cropped-cropped-Logo-ProgDepre-FotoJet.png" alt="logo"></a>            
-        </div><!--logo-->
-        <nav class="desktop right">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Contato</a></li>
-            </ul>
-        </nav>
-        <nav class="mobile right">
-            <div class="botao-menu-mobile">
-            <i class="fas fa-bars"></i>
-            </div><!--botao-menu-mobile-->
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="clear"></div>
-        </div><!--center-->
-    </header>     
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">Programadores Deprê</div>
+        <!-- NAVEGAÇÃO MENU -->
+        <ul class="nav-links">
+            <!-- CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- NAVEGAÇÃO MENUS -->
+            <div class="menu">
+                <li><a href="/">Início</a></li>
+                <li><a href="/">Sobre</a></li>
+                <li class="services">
+                    <a href="/">Serviços</a>
+                    <!-- MENU SUSPENSO OU DROPDOWN MENU -->
+                    <ul class="dropdown">
+                        <li><a href="/">Menu suspenso 1 </a></li>
+                        <li><a href="/">Menu suspenso 2</a></li>
+                        <li><a href="/">Menu suspenso 2</a></li>
+                        <li><a href="/">Menu suspenso 3</a></li>
+                        <li><a href="/">Menu suspenso 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="/">Preços</a></li>
+                <li><a href="/">Contato</a></li>
+            </div>
+        </ul>
+    </nav>
 </body>
+
 </html>
