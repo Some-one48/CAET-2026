@@ -32,17 +32,21 @@ a {
 }
 
 #navbar{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu{
     margin: 0;
     padding: 0;
     padding: 0 5% 5px;
     line-height: 0;
     background-color: var(--cy);
 
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: right;
-
+    
     column-gap: 5%;
 }
 
@@ -52,8 +56,8 @@ a {
     list-style-type: none;
 }
 
-#navbar a:hover {
-    background-color: black;
+#navbar li a:hover {
+    background-color: var(--bl);
     color: var(--wh);
 
     /*
@@ -77,6 +81,10 @@ footer{
     background-color: var(--bl);
     color: var(--wh);
     padding: 10px;
+}
+
+footer .col{
+    min-width: 250px;
 }
 
 footer ul{
@@ -123,3 +131,25 @@ li{
     color: inherit;
 }
 
+@media (max-width: 768px){
+
+.menu{
+    column-gap: 0; 
+}
+
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li a:hover {
+    padding: 3px 10px;
+}
+
+#navbar li{
+    padding: 0 15px;
+}
+
+}
