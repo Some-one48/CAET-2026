@@ -36,18 +36,14 @@ a {
     flex-direction: column;
 }
 
-.menu{
-    margin: 0;
-    padding: 0;
-    padding: 0 5% 5px;
-    line-height: 0;
-    background-color: var(--cy);
-
-    flex-direction: row;
+.menu {
+    display: flex;
+    width: 100%;                  
+    background-color: var(--cy); 
+    padding: 10px 20px;           
     align-items: center;
-    justify-content: right;
-    
-    column-gap: 5%;
+    justify-content: flex-end;    
+    column-gap: 20px;
 }
 
 #navbar ul{
