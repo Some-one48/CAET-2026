@@ -35,15 +35,136 @@
 	<div style="max-width: 600px;">
 		<div id="br_mine"></div>
 	</div>
+
+    <div id="texto">
+
+    </div>
 	
 	<script src="../mapa.js"></script>
    
 	<script>
+        const estado = [
+            am = {
+                nome: "AC",
+                dados: "hello",
+            },
+            al = {
+                nome: "AL",
+                dados: "hello",
+            },
+            ap = {
+                nome: "AP",
+                dados: "hello",
+            },
+            am = {
+                nome: "AM",
+                dados: "hello",
+            },
+            ba = {
+                nome: "BA",
+                dados: "hello",
+            },
+            ce = {
+                nome: "CE",
+                dados: "hello",
+            },
+            es = {
+                nome: "ES",
+                dados: "hello",
+            },
+            df = {
+                nome: "DF",
+                dados: "hello",
+            },
+            ma = {
+                nome: "MA",
+                dados: "hello",
+            },
+            mt = {
+                nome: "MT",
+                dados: "hello",
+            },
+            ms = {
+                nome: "MS",
+                dados: "hello",
+            },
+            mg = {
+                nome: "MG",
+                dados: "hello",
+            },
+            pa = {
+                nome: "PA",
+                dados: "hello",
+            },
+            pb = {
+                nome: "PB",
+                dados: "hello",
+            },
+            pr = {
+                nome: "PR",
+                dados: "hello",
+            },
+            pe = {
+                nome: "PE",
+                dados: "hello",
+            },
+            pi = {
+                nome: "PI",
+                dados: "hello",
+            },
+            rj = {
+                nome: "RJ",
+                dados: "hello",
+            },
+            rn = {
+                nome: "RN",
+                dados: "hello",
+            },
+            rn = {
+                nome: "RS",
+                dados: "hello",
+            },
+            ro = {
+                nome: "RO",
+                dados: "hello",
+            },
+            rr = {
+                nome: "RR",
+                dados: "hello",
+            },
+            sc = {
+                nome: "SC",
+                dados: "hello",
+            },
+            sp = {
+                nome: "SP",
+                dados: "hello",
+            },
+            se = {
+                nome: "SE",
+                dados: "hello",
+            },
+            to = {
+                nome: "TO",
+                dados: "hello",
+            },
+        ];
+
+        let click = 0;
+
 		BrMap.Draw({
 			wrapper: '#br_mine', 
 			selectStates: [],
 			callbacks: {
-				click: (element, uf) => { alert(uf); },
+				click: (element, uf) => {
+                    click++;
+
+                    for (item of estado){
+                        if(item.nome == uf && click <= 1){
+                            document.querySelector("#texto").appendChild(document.createTextNode(item.dados));
+                        }
+                    }
+                },
 				/*mouseover: (element, uf) => { 
 					document.querySelector("#any-").appendChild(document.createTextNode(uf+" "));
 				},*/
