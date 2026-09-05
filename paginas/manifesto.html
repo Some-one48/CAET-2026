@@ -11,15 +11,21 @@
 <body>
     <!-- HEADER comum para todas as páginas -->
     <header>
-        <a id="logo" class="link" href="../index.html">
-            <img src="../static/logo-white.png" style="max-height: 100px; margin-right: 10px;">
-            <div>
-                <h1>Educação Ambiental e Tecnologia</h1>
-                <h4>CAET 2026 - 1º TII</h4>
-            </div>
-        </a>
+    <nav id="navbar">
+        <div id="logo">
+            <a class="link" href="../index.html">
+                <div class="row">
+                    <img class="col" src="../static/media/logo-white.png" style="max-height: 100px; max-width: 100px; margin-right: 10px;">
 
-        <nav id="navbar">
+                    <div class="nquebrar col">
+                        <p class="h1">Educação Ambiental e Tecnologia</p>
+                        <h4>CAET 2026 - 1º TII</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+            <div class="menu">
             <ul>
                 <li><a class="link" href="/paginas/pesquisa.html">Pesquisa</a></li>
                 <li><a class="link" href="/paginas/slides.html">Slides</a></li>
@@ -27,11 +33,12 @@
                 <li><a class="link" href="/paginas/video.html">Vídeo</a></li>
                 <li><a class="link" href="/paginas/mapa.html">Mapa</a></li>
             </ul>
+            </div>
         </nav>
     </header>
 
     <main>
-        <a href="../manifesto.pdf" download="manifesto.pdf">Baixe o Manifesto Aqui!</a>
+        <a href="../static/manifesto.pdf" download="manifesto_1tii_2026.pdf">Manifesto em pdf</a>
         <!-- Tem que mudar esse texto depois. Parece muito um golpe -->
     </main>
    
@@ -40,7 +47,7 @@
     <footer>
         <!-- Deixar o icone branco dps -->
         <a class="link" href="https://www.instagram.com/1.tii2026?igsi=MTVlNDA4eHcwYzZ4" target="_blank">        
-            <img src="../static/instagram.png" style="max-height: 20px;">
+            <img src="../static/media/instagram.png" style="max-height: 20px;">
             @1.tii2026</a>
 
             <hr>

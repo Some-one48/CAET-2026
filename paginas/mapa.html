@@ -9,17 +9,23 @@
 </head>
 
 <body>
-    <!-- HEADER comum para todas as páginas -->
+     <!-- HEADER comum para todas as páginas -->
     <header>
-        <a id="logo" class="link" href="../index.html">
-            <img src="../static/logo-white.png" style="max-height: 100px; margin-right: 10px;">
-            <div>
-                <h1>Educação Ambiental e Tecnologia</h1>
-                <h4>CAET 2026 - 1º TII</h4>
-            </div>
-        </a>
+    <nav id="navbar">
+        <div id="logo">
+            <a class="link" href="../index.html">
+                <div class="row">
+                    <img class="col" src="../static/media/logo-white.png" style="max-height: 100px; max-width: 100px; margin-right: 10px;">
 
-        <nav id="navbar">
+                    <div class="nquebrar col">
+                        <p class="h1">Educação Ambiental e Tecnologia</p>
+                        <h4>CAET 2026 - 1º TII</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+            <div class="menu">
             <ul>
                 <li><a class="link" href="/paginas/pesquisa.html">Pesquisa</a></li>
                 <li><a class="link" href="/paginas/slides.html">Slides</a></li>
@@ -27,141 +33,168 @@
                 <li><a class="link" href="/paginas/video.html">Vídeo</a></li>
                 <li><a class="link" href="/paginas/mapa.html">Mapa</a></li>
             </ul>
+            </div>
         </nav>
     </header>
 
     <main>
-        <div id="any-"></div>
-	<div style="max-width: 600px;">
-		<div id="br_mine"></div>
-	</div>
+        <div class="row">
+            <div class="col">
+                <div id="any-"></div>
+                <div style="max-width: 600px;">
+                    <div id="br_mine"></div>
+                </div>
+            </div>
 
-    <div id="texto">
-
-    </div>
+            <div class="col">
+                <div class="estado_info">
+                    <h3 id="estado_nome">Estado</h3>
+                    <p id="dado">Selecione um Estado</p>
+                </div>
+            </div>
+        </div>
 	
 	<script src="../mapa.js"></script>
    
 	<script>
         const estado = [
             am = {
-                nome: "AC",
-                dados: "hello",
+                uf: "AC",
+                nome: "Acre",
+                dados: "1",
             },
             al = {
-                nome: "AL",
-                dados: "hello",
+                uf: "AL",
+                nome: "Alagoas",
+                dados: "2",
             },
             ap = {
-                nome: "AP",
+                uf: "AP",
+                nome: "?",
                 dados: "hello",
             },
             am = {
-                nome: "AM",
+                uf: "AM",
+                nome: "Amazonas",
                 dados: "hello",
             },
             ba = {
-                nome: "BA",
+                uf: "BA",
+                nome: "Bahia",
                 dados: "hello",
             },
             ce = {
-                nome: "CE",
+                uf: "CE",
+                nome: "Ceará",
                 dados: "hello",
             },
             es = {
-                nome: "ES",
+                uf: "ES",
+                nome: "Espírito Santo",
                 dados: "hello",
             },
             df = {
-                nome: "DF",
+                uf: "DF",
+                nome: "Distrito Federal",
+                dados: "hello",
+            },
+            go = {
+                uf: "GO",
+                nome: "Goiás",
                 dados: "hello",
             },
             ma = {
-                nome: "MA",
+                uf: "MA",
                 dados: "hello",
             },
             mt = {
-                nome: "MT",
+                uf: "MT",
                 dados: "hello",
             },
             ms = {
-                nome: "MS",
+                uf: "MS",
                 dados: "hello",
             },
             mg = {
-                nome: "MG",
+                uf: "MG",
+                nome: "Minas Gerais",
                 dados: "hello",
             },
             pa = {
-                nome: "PA",
+                uf: "PA",
+                nome: "Pará",
                 dados: "hello",
             },
             pb = {
-                nome: "PB",
+                uf: "PB",
                 dados: "hello",
             },
             pr = {
-                nome: "PR",
+                uf: "PR",
                 dados: "hello",
             },
             pe = {
-                nome: "PE",
+                uf: "PE",
+                nome: "Pernambuco",
                 dados: "hello",
             },
             pi = {
-                nome: "PI",
+                uf: "PI",
+                nome: "Piauí",
                 dados: "hello",
             },
             rj = {
-                nome: "RJ",
+                uf: "RJ",
+                nome: "Rio de Janeiro",
                 dados: "hello",
             },
             rn = {
-                nome: "RN",
+                uf: "RN",
                 dados: "hello",
             },
             rn = {
-                nome: "RS",
+                uf: "RS",
                 dados: "hello",
             },
             ro = {
-                nome: "RO",
+                uf: "RO",
                 dados: "hello",
             },
             rr = {
-                nome: "RR",
+                uf: "RR",
                 dados: "hello",
             },
             sc = {
-                nome: "SC",
+                uf: "SC",
+                nome: "Santa Catarina",
                 dados: "hello",
             },
             sp = {
-                nome: "SP",
+                uf: "SP",
+                nome: "São Paulo",
                 dados: "hello",
             },
             se = {
-                nome: "SE",
+                uf: "SE",
+                nome: "Sergipe",
                 dados: "hello",
             },
             to = {
-                nome: "TO",
+                uf: "TO",
+                nome: "Tocantins",
                 dados: "hello",
             },
         ];
-
-        let click = 0;
 
 		BrMap.Draw({
 			wrapper: '#br_mine', 
 			selectStates: [],
 			callbacks: {
 				click: (element, uf) => {
-                    click++;
-
                     for (item of estado){
-                        if(item.nome == uf && click <= 1){
-                            document.querySelector("#texto").appendChild(document.createTextNode(item.dados));
+                        if(item.uf == uf){
+                            document.getElementById("estado_nome").textContent= item.nome;
+                            document.getElementById("dado").textContent= item.dados;
                         }
                     }
                 },
@@ -178,7 +211,7 @@
     <footer>
         <!-- Deixar o icone branco dps -->
         <a class="link" href="https://www.instagram.com/1.tii2026?igsi=MTVlNDA4eHcwYzZ4" target="_blank">        
-            <img src="../static/instagram.png" style="max-height: 20px;">
+            <img src="../static/media/instagram.png" style="max-height: 20px;">
             @1.tii2026</a>
 
             <hr>
