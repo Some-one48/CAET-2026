@@ -131,6 +131,7 @@ li{
     color: inherit;
 }
 
+
 @media (max-width: 768px){
 
 .menu{
@@ -155,5 +156,14 @@ li{
 #logo .nquebrar{
     white-space: wrap;
 }
+
+/* VIDEO */
+
+#video {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
 
 }
