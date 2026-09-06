@@ -31,6 +31,10 @@ a {
     padding: 3%;
 }
 
+#logo .nquebrar{
+    white-space: nowrap;
+}
+
 #navbar{
     display: flex;
     flex-direction: column;
@@ -127,6 +131,7 @@ li{
     color: inherit;
 }
 
+
 @media (max-width: 768px){
 
 .menu{
@@ -147,5 +152,18 @@ li{
 #navbar li{
     padding: 0 15px;
 }
+
+#logo .nquebrar{
+    white-space: wrap;
+}
+
+/* VIDEO */
+
+#video {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
 
 }
