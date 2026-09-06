@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Oculta qualquer vazamento horizontal residual */
+}
+
 :root{
     /*
     --bl: #0a3323;
@@ -50,10 +55,12 @@ a {
     column-gap: 20px;
 }
 
-#navbar ul{
-    position: relative;
-    margin-top: 20px;
+#navbar ul {
+    /* Remova a margin-top e garanta alinhamento à direita */
     list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap; /* Evita que os itens estourem a tela em resoluções intermediárias */
 }
 
 #navbar li a:hover {
@@ -69,9 +76,9 @@ a {
     transition: 0.3s ease;
 }
 
-#navbar li{
+#navbar li {
     font-size: 15px;
-    padding: 0 30px;
+    padding: 0 15px; /* Reduzido de 30px para 15px para não estourar a tela */
     text-transform: uppercase;
     display: inline-block;
 }
@@ -111,6 +118,13 @@ main{
 
     background-color: var(--wh);
     color: var(--bl);
+}
+
+main.pagina-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 ul{
@@ -165,9 +179,15 @@ li{
 /* VIDEO */
 
 #video {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    margin-bottom: 15px;
+}
+
+#video video {
+    max-width: 100%;
+    height: auto;
 }
 
 }
