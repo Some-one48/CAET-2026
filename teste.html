@@ -1,165 +1,56 @@
-
-<html lang="pt-br">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Programadores Deprê</title>
-
-    <style>
-        /* UTILIDADES */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   }
-   body {
-    font-family: cursive;
-   }
-   a {
-    text-decoration: none;
-   }
-   li {
-    list-style: none;
-   }
-
-   /* NAVBAR ESTILO */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: teal;
-    color: #fff;
-   }
-   .nav-links a {
-    color: #fff;
-   }
-   /* LOGO */
-   .logo {
-    font-size: 32px;
-   }
-   /* NAVBAR MENU */
-   .menu {
-    display: flex;
-    gap: 1em;
-    font-size: 18px;
-   }
-   .menu li:hover {
-    background-color: #4c9e9e;
-    border-radius: 5px;
-    transition: 0.3s ease;
-   }
-   .menu li {
-    padding: 5px 14px;
-   }
-   /* MENU SUSPENSO */
-   .services {
-    position: relative; 
-   }
-   .dropdown {
-    background-color: rgb(1, 139, 139);
-    padding: 1em 0;
-    position: absolute; /*COM RELAÇÃO AOS PAIS*/
-    display: none;
-    border-radius: 8px;
-    top: 35px;
-   }
-   .dropdown li + li {
-    margin-top: 10px;
-   }
-   .dropdown li {
-    padding: 0.5em 1em;
-    width: 8em;
-    text-align: center;
-   }
-   .dropdown li:hover {
-    background-color: #4c9e9e;
-   }
-   .services:hover .dropdown {
-    display: block;
-   }
-
-   /* NAVBAR MENU RESPONSIVA*/
-/* CHECKBOX HACK */
-input[type=checkbox]{
-    display: none;
-   } 
-   /*HAMBURGER MENU*/
-   .hamburger {
-    display: none;
-    font-size: 24px;
-    user-select: none;
-   }
-   /* APLICAÇÃO MEDIA QUERIES */
-   @media (max-width: 768px) {
-   .menu { 
-    display:none;
-    position: absolute;
-    background-color:teal;
-    right: 0;
-    left: 0;
-    text-align: center;
-    padding: 16px 0;
-   }
-   .menu li:hover {
-    display: inline-block;
-    background-color:#4c9e9e;
-    transition: 0.3s ease;
-   }
-   .menu li + li {
-    margin-top: 12px;
-   }
-   input[type=checkbox]:checked ~ .menu{
-    display: block;
-   }
-   .hamburger {
-    display: block;
-   }
-   .dropdown {
-    left: 50%;
-    top: 30px;
-    transform: translateX(35%);
-   }
-   .dropdown li:hover {
-    background-color: #4c9e9e;
-   }
-   }
-
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Gráfico com Chart.js</title>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
-    <nav class="navbar">
-        <!-- LOGO -->
-        <div class="logo">Programadores Deprê</div>
-        <!-- NAVEGAÇÃO MENU -->
-        <ul class="nav-links">
-            <!-- CHECKBOX HACK -->
-            <input type="checkbox" id="checkbox_toggle" />
-            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-            <!-- NAVEGAÇÃO MENUS -->
-            <div class="menu">
-                <li><a href="/">Início</a></li>
-                <li><a href="/">Sobre</a></li>
-                <li class="services">
-                    <a href="/">Serviços</a>
-                    <!-- MENU SUSPENSO OU DROPDOWN MENU -->
-                    <ul class="dropdown">
-                        <li><a href="/">Menu suspenso 1 </a></li>
-                        <li><a href="/">Menu suspenso 2</a></li>
-                        <li><a href="/">Menu suspenso 2</a></li>
-                        <li><a href="/">Menu suspenso 3</a></li>
-                        <li><a href="/">Menu suspenso 4</a></li>
-                    </ul>
-                </li>
-                <li><a href="/">Preços</a></li>
-                <li><a href="/">Contato</a></li>
-            </div>
-        </ul>
-    </nav>
-</body>
+<div style="max-width: 80%;max-height: 80%;">
+ <canvas id="pieChart"></canvas>
+</div>
 
+<div style="max-width: 80%;max-height: 80%;">
+<canvas id="myChart"></canvas>
+</div>
+
+<script>
+ const ctx = document.getElementById('pieChart').getContext('2d');
+ const pieChart = new Chart(ctx, {
+   type: 'pie',
+   data: {
+     labels: ['Red', 'Blue', 'Yellow'],
+     datasets: [{
+       data: [300, 50, 100],
+       backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+     }]
+   },
+   options: {
+     responsive: true
+   }
+ });
+
+ const ctx2 = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx2, {
+type: 'bar',
+data: {
+labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril'],
+datasets: [{
+label: 'Vendas',
+data: [12, 19, 3, 5],
+backgroundColor: ['rgba(75, 192, 192, 0.2)'],
+borderColor: ['rgba(75, 192, 192, 1)'],
+borderWidth: 1
+}]
+},
+options: {
+responsive: true,
+scales: {
+y: { beginAtZero: true }
+}
+}
+});
+</script>
+</body>
 </html>
