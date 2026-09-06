@@ -145,6 +145,11 @@ li{
     color: inherit;
 }
 
+/* PESQUISA */
+.grafico {
+    max-width: 40%;
+    margin: 20px;
+}
 
 @media (max-width: 768px){
 
@@ -184,6 +189,5 @@ li{
     max-width: 100%;
     height: auto;
 }
-
 
 }
