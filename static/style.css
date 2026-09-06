@@ -133,7 +133,8 @@ li{
 
 /* PESQUISA */
 .grafico {
-    max-width: 50%;
+    max-width: 40%;
+    margin: 20px;
 }
 
 @media (max-width: 768px){
@@ -168,6 +169,5 @@ li{
     justify-content: center;
     align-items: center; 
 }
-
 
 }

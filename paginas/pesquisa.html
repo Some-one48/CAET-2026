@@ -47,33 +47,58 @@
             </ul>
         </div>
 
+        <div id="psociologica" class="row">
+            <h2>Pesquisa Sociológica</h2>
+            <div class="grafico col">
+                <canvas id="genero"></canvas>
+            </div>
 
+            <div class="grafico col">
+                <canvas id="idade"></canvas>
+            </div>
 
-        <div id="psociologica">
-             <div class="grafico">
+            <div class="grafico col">
+                <canvas id="raca"></canvas>
+            </div>
+
+            <div class="grafico col">
                 <canvas id="zona"></canvas>
+            </div>
+
+            <div class="grafico col">
+                <canvas id="e"></canvas>
+            </div>
+
+            <div class="grafico col">
+                <canvas id="f"></canvas>
+            </div>
+
+            <div class="grafico col">
+                <canvas id="g"></canvas>
+            </div>
+
+            <div class="grafico col">
+                <canvas id="h"></canvas>
+            </div>
+
+            <div class="grafico col">
+                <canvas id="i"></canvas>
+            </div>
+
+            <div class="grafico col">
+                <canvas id="j"></canvas>
+            </div>
+
+            <div class="grafico col">
+                <canvas id="k"></canvas>
+            </div>
+
+            <div class="grafico col">
+                <canvas id="l"></canvas>
             </div>
         </div>
        
-        
-
-        <script>
-            let ctx = document.getElementById("zona").getContext("2d");
-            const zona = new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    labels: ['Zona Urbana', 'Zona Rural'],
-                    datasets: [{
-                        data: [50, 50],
-                        backgroundColor:['#FF6384', '#36A2EB'],
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true
-                }
-            });
-        </script>
+        <script src="../paginas/graficos.js"></script>
     </main>
    
 
