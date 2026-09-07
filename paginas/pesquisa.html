@@ -40,15 +40,218 @@
 
     <main>
          <div id="sumario">
-            <h2>Sumário</h2>
+            <h1>Sumário</h1>
             <ul>
-                <li><a href="#sumario">Sumário</a></li>
+                <li><a href="#impcambi">Os Impactos das IAs ao Meio Ambiente</a></li>
+                <ul>
+                    <li><a href="#intro">Introdução</a></li>
+                    <ul>
+                        <li><a href="#infra">Infraestrutura</a></li>
+                        <ul>
+                            <li><a href="#comof">Como funciona</a></li>
+                            <li><a href="#imporefi">A Importância da Eficiência</a></li>
+                        </ul>
+                    </ul>
+                    <li><a href="#tp2">Energia, demanda energética e mudanças climáticas</a></li>
+                    <ul>
+                        <li><a href="#tp21">Produção de energia e emissões causadas pela IA</a></li>
+                        <ul>
+                            <li><a href="#tp21">Relação entre IA e consumo de energia</a></li>
+                            <ul>
+                                <li><a href="#tp212">De onde vem a energia dos data centers?</a></li>
+                                <li><a href="#tp213">Crescimento do consumo de eletricidade</a></li>
+                            </ul>
+                            <li><a href="#tp214">Emissões de CO<sub>2</sub></a></li>
+                            <ul>
+                                <li><a href="#tp2141">Carvão e gás natural</a></li>
+                                <li><a href="#tp2142">A energia renovável resolve o problema?</a></li>
+                            </ul>
+                        </ul>
+                    </ul>
+                </ul>
+                <li><a href="#impcsoc">Os Impactos das IAs à Sociedade</a></li>
                 <li><a href="#psociologica">Pesquisa Sociológica</a></li>
             </ul>
         </div>
 
+        <h1 id="impcambi">Os Impactos das IAs ao Meio Ambiente</h1>
+        <p style="text-align: right;"><i>Texto elaborado pela equipe da <b><a href="#pba">Pesquisa Bruta - Ambiental</a></b></i></p>
+        <div id="intro">
+            <h2>Introdução</h2>
+            <p>&emsp;O desenvolvimento da tecnologia está relacionado às transformações ocorridas na sociedade e à
+            capacidade humana de produzir conhecimento para atender às suas necessidades. Ao longo da
+            história, os avanços científicos e tecnológicos modificaram as formas de vivência, contribuindo para
+            mudanças significativas na organização da sociedade. Dessa forma, a tecnologia pode ser
+            compreendida de maneira ampla, envolvendo conhecimentos, técnicas, processos e instrumentos
+            utilizados pelo ser humano para transformar a realidade.</p>
+            <p>&emsp;Embora o desenvolvimento tecnológico esteja presente em diferentes períodos históricos, ele
+            se intensificou principalmente a partir da Revolução Industrial, quando a utilização de máquinas e de
+            novas fontes de energia modificou os sistemas de produção. Posteriormente, o desenvolvimento dos
+            meios de comunicação, dos computadores e das tecnologias digitais ampliou a capacidade de
+            produção e circulação de informações. Com o surgimento da internet, dos dispositivos móveis e das
+            redes digitais, a tecnologia passou a ocupar um espaço cada vez maior nas atividades cotidianas,
+            incluindo os processos educativos. Atualmente, tecnologias como sistemas de inteligência artificial,
+            sensores, plataformas digitais e ferramentas de análise de dados aumentam as possibilidades de
+            compartilhamento e produção de conhecimentos.</p>
+            <p>&emsp;Nesse contexto, a Educação Ambiental apresenta-se como um importante espaço para discutir
+            a relação entre sociedade, tecnologia e meio ambiente. A Educação Ambiental não deve se limitar à
+            transmissão de informações sobre a preservação da natureza, mas possibilitar que as pessoas
+            compreendam criticamente as relações entre as ações humanas e os problemas socioambientais.
+            Assim, discutir tecnologia no ambiente da Educação Ambiental significa também refletir sobre os
+            modos de produção e consumo, o uso dos recursos naturais, a geração de resíduos, o consumo de
+            energia e as consequências das escolhas tecnológicas realizadas pela sociedade.</p>
+            <p>&emsp;Essa relação permite compreender a tecnologia como uma produção social que influencia
+            diretamente a maneira como a sociedade utiliza os recursos naturais e enfrenta os problemas
+            ambientais. Ao mesmo tempo em que os avanços tecnológicos ampliam as possibilidades de
+            intervenção e produção de conhecimento, eles também exigem reflexão sobre seus limites, impactos e
+            consequências. Dessa forma, incorporar essa discussão à Educação Ambiental possibilita que o
+            estudante não seja apenas um usuário das tecnologias, mas compreenda seu funcionamento, seus
+            efeitos e seu papel nas transformações sociais e ambientais.</p>
+
+            <h3 id="infra">Infraestrutura dos Data Centers</h3>
+            <p>&emsp;Um data center é uma estrutura física destinada a abrigar os principais recursos de tecnologia da
+            informação de uma organização. Entre eles estão, por exemplo, servidores, sistemas de
+            armazenamento e redes de comunicação. Com o crescimento da computação em nuvem e das
+            IAs(inteligências artificiais), esses ambientes que antes eram pequenas estruturas estão se tornando
+            cada vez maiores como por exemplo grandes complexos de computação, chamados de hyperscale data
+            centers.</p>
+            <p>&emsp;Dentro dessas estruturas existem os servidores físicos, que fornecem recursos como CPU, memória
+            RAM e armazenamento. Também são necessários sistemas de refrigeração, pois os equipamentos
+            produzem muito calor durante seu funcionamento, o que acaba gerando uma grande dependência de
+            recursos hídricos.</p>
+
+            <h4 id="comof">Como funciona</h4>
+            <p>&emsp;Podemos dividir em:</p>
+            <ul>
+                <li><strong>Servidores físicos:</strong> que fornecem a capacidade de processamento e o armazenamento necessários
+                para executar os serviços.</li>
+                <li><strong>Virtualização:</strong> um único servidor físico pode executar várias máquinas virtuais (VMs). Cada VM
+                funciona como uma máquina independente, com seu próprio sistema operacional e aplicações, mas
+                compartilha CPU, RAM e armazenamento do servidor físico.</li>
+                <li><strong>Distribuição de recursos:</strong> cada VM recebe uma determinada quantidade de CPU e RAM de acordo
+                com as necessidades de suas devidas aplicações.</li>
+                <li><strong>Monitoramento:</strong> os sistemas de monitoramento acompanham continuamente a utilização desses
+                recursos e podem identificar quando uma VM está utilizando recursos demais ou de menos.</li>
+                <li><strong>Automatização:</strong> os recursos podem ser redimensionados automaticamente conforme a demanda.
+                VMs também podem ser migradas entre servidores para uma melhor distribuição da carga.</li>
+                <li><strong>Consolidação:</strong> VMs pouco utilizadas podem ser concentradas em menos servidores físicos,
+                permitindo que máquinas sem utilidade, sejam desligadas assim economizando recursos energéticos.</li>
+            </ul>
+
+            <h4 id="imporefi">A Importância da Eficiência</h4>
+            <p>&emsp;Um grande problema enfrentado pelos data centers é o over-provisioning, quando uma VM recebe
+            mais CPU e RAM do que realmente precisa. Isso desperdiça capacidade computacional, aumenta os
+            custos e contribui para um consumo energético e recursos desnecessários. Por outro lado, fornecer
+            recursos insuficientes pode prejudicar o desempenho e até comprometer os acordos de nível de
+            serviço (SLAs).</p>
+            <p>&emsp;Por isso, os data centers modernos buscam encontrar um equilíbrio entre desempenho e consumo de
+            recursos. A virtualização, o monitoramento contínuo, o balanceamento de carga e a automação
+            permitem utilizar melhor a infraestrutura</p>
+        </div>
+
+        <div id="tp2">
+            <h2>Energia, demanda energética e mudanças climáticas</h2>
+            <p>&emsp;O crescimento da inteligência artificial (IA) está aumentando significativamente a demanda por
+            eletricidade. Isso acontece porque o desenvolvimento e o funcionamento dos sistemas de IA
+            dependem de grandes data centers, que possuem milhares de servidores e chips especializados, como
+            GPUs e TPUs. Essas máquinas precisam funcionar continuamente e também exigem sistemas de
+            refrigeração, aumentando ainda mais o consumo de energia.</p>
+            <p>&emsp;Em 2024, os data centers foram responsáveis por aproximadamente 1,5% do consumo mundial de
+eletricidade. A Agência Internacional de Energia (IEA) estima que essa demanda possa chegar a 945
+TWh até 2030, quase o dobro do consumo atual. Embora os data centers sejam utilizados para
+diversas atividades, a IA é uma das principais responsáveis pelo crescimento dessa demanda.</p>
+<p>&emsp;O aumento do consumo de eletricidade também está relacionado às mudanças climáticas. Isso ocorre
+porque uma parcela significativa da eletricidade mundial ainda é produzida por combustíveis fósseis,
+como carvão e gás natural. Dessa forma, quanto maior a demanda energética da IA, maior pode ser a
+quantidade de gases de efeito estufa liberados na geração dessa energia.</p>
+<p>&emsp;Em 2024, as emissões indiretas de CO₂ dos data centers, provenientes do consumo de eletricidade,
+foram estimadas em cerca de 180 milhões de toneladas. Esse valor corresponde a aproximadamente
+0,5% das emissões globais provenientes da combustão de combustíveis. Apesar de parecer uma
+parcela pequena, as emissões dos data centers estão entre as que mais crescem.</p>
+<p>&emsp;Outro fator importante é a inferência, que ocorre toda vez que um sistema de IA processa uma
+solicitação e produz uma resposta. Diferentemente do treinamento, que acontece em períodos
+específicos, a inferência ocorre continuamente conforme as pessoas utilizam os sistemas. Com o
+crescimento do número de usuários e consultas, o consumo de energia pode aumentar
+consideravelmente.</p>
+<p>&emsp;Portanto, o avanço da IA representa um novo desafio para o combate às mudanças climáticas. A
+tecnologia pode contribuir para soluções ambientais, mas seu crescimento precisa ser acompanhado
+por investimentos em fontes de energia renováveis, maior eficiência dos data centers e transparência
+sobre o consumo energético dos modelos de IA. Caso contrário, o aumento da demanda por
+eletricidade poderá contribuir para o crescimento das emissões de gases de efeito estufa.</p>
+
+        <h3 id="tp21">Produção de energia e emissões causadas pela IA</h3>
+        <h4>Relação entre IA e consumo de energia</h4>
+        <p>&emsp;A Inteligência Artificial depende de eletricidade para funcionar. Os modelos de IA são
+        treinados e executados em data centers, onde servidores especializados realizam grandes
+        quantidades de cálculos.</p>
+        <p>&emsp;O impacto ambiental não depende somente da quantidade de eletricidade consumida, mas
+        também de como essa eletricidade é produzida.</p>
+        <p>&emsp;Processo simplificado</p>
+        <p>Uso da IA &rarr; Data Center &rarr; Servidores &rarr; Consumo de eletricidade &rarr; Geração de energia
+        &rarr; Emissões e impactos ambientais</p>
+
+        <h5 id="tp212">De onde vem a energia dos data centers?</h5>
+        <p>&emsp;A eletricidade utilizada pelos data centers pode ser produzida por diferentes fontes</p>
+        <p>Fontes não renováveis:</p>
+        <ul>
+            <li>Carvão;</li>
+            <li>Gás natural;</li>
+            <li>Petróleo.</li>
+        </ul>
+        <p>&emsp;A utilização de combustíveis fósseis pode gerar grandes quantidades de CO2, um dos
+        principais gases de efeito estufa</p>
+        <p>Fontes renováveis:</p>
+        <ul>
+            <li>Solar;</li>
+            <li>Eólica;</li>
+            <li>Hidrelétrica.</li>
+        </ul>
+        <p>&emsp;Segundo a IEA, essas fontes representavam cerca de 27% da eletricidade consumida
+        globalmente pelos data centers na análise de 2025. A agência também projetou que as
+        renováveis poderiam representar quase metade do crescimento adicional da demanda
+        elétrica dos data centers até 2030.</p>
+        
+        <h5 id="tp213">Crescimento do consumo de eletricidade</h5>
+        <p>&emsp;O crescimento da IA aumenta a necessidade de data centers maiores e mais potentes.</p>
+        <p>Segundo a IEA:</p>
+        <ul>
+            <li>Em 2024, os data centers consumiram aproximadamente 415 TWh de eletricidade;</li>
+            <li>Isso correspondeu a cerca de 1,5% do consumo mundial de eletricidade;</li>
+            <li>Até 2030, o consumo pode chegar a aproximadamente 945 TWh.</li>
+        </ul>
+        <p><i><strong>Importante:</strong> esses números representam todos os serviços realizados nos
+data centers, e não somente a Inteligência Artificial. Eles também incluem
+armazenamento em nuvem, sites, aplicativos e streaming. A IA, porém, é
+apontada como um dos principais fatores do crescimento dessa demanda.</i></p>
+
+<h4 id="tp214">Emissões de CO<sub>2</sub></h4>
+<p>&emsp;Quando a eletricidade utilizada pelos data centers é produzida com combustíveis fósseis,
+ocorre a emissão indireta de CO<sub>2</sub></p>
+<p>&emsp;A IEA estima que os data centers tenham sido responsáveis por aproximadamente 180
+milhões de toneladas de CO<sub>2</sub> em emissões indiretas associadas ao consumo de
+eletricidade. Esse número inclui todas as atividades dos data centers, não apenas IA.</p>
+<p>&emsp;No cenário-base da IEA, esse valor pode chegar a aproximadamente 300 milhões de
+toneladas de CO<sub>2</sub> em 2035.</p>
+
+<h5 id="tp2141">Carvão e gás natural</h5>
+<p>&emsp;O carvão representa uma parte significativa da eletricidade utilizada pelos data centers. A
+IEA estima que atualmente ele corresponda a cerca de 30% da eletricidade utilizada
+globalmente pelos data centers, embora esse valor varie de acordo com a região.</p>
+<p>&emsp;Como o carvão possui alta intensidade de carbono, seu uso pode aumentar o impacto
+climático associado à expansão dos data centers.</p>
+<p>&emsp;O gás natural também pode ajudar a atender ao aumento da demanda energética. No
+cenário da IEA, renováveis, gás natural e energia nuclear possuem papéis importantes no
+atendimento dessa demanda.</p>
+
+<h5 id="tp2142">A energia renovável resolve o problema?</h5>
+        </div>
+
+        <h1 id="impcsoc">Os Impactos das IAs à Sociedade</h1>
+        <p style="text-align: right;"><i>Texto elaborado pela equipe da <b><a href="#pbs">Pesquisa Bruta - Social</a></b></i></p>
+
+
         <div id="psociologica" class="row">
-            <h2>Pesquisa Sociológica</h2>
+            <h1>Pesquisa Sociológica</h1>
             <div class="grafico col">
                 <canvas id="genero"></canvas>
             </div>
@@ -112,7 +315,7 @@
             <hr>
 
         <div class="row">
-            <div class="col">
+            <div class="col" id="pba">
                 <ul>
                     <li><h5>Pesquisa Bruta - Ambiental</h5></li>
                     <li>Alan Daví de Aguiar</li>
@@ -125,7 +328,7 @@
                 </ul>
             </div>
 
-            <div class="col">
+            <div class="col" id="pbs">
                 <ul>
                     <li><h5>Pesquisa Bruta - Social</h5></li>
                     <li>Alessandra Vitória Peçanha</li>

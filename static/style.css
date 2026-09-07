@@ -127,6 +127,7 @@ main.pagina-video {
     text-align: center;
 }
 
+/*
 ul{
     list-style-type: none;
 }
@@ -134,7 +135,7 @@ ul{
 li{
     margin-left: 0;
     padding: 0;
-}
+}*/
 
 .state{
     text-decoration: none;
@@ -146,6 +147,10 @@ li{
 }
 
 /* PESQUISA */
+main div p, main div li{
+    text-align: justify;
+}
+
 .grafico {
     max-width: 40%;
     margin: 20px;
