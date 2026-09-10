@@ -20,6 +20,10 @@ html, body {
 }
 
 /* GERAL */
+body {
+    font-size: 18px;
+}
+
 header{
     background-color: var(--bl);
     color: var(--wh);
@@ -194,5 +198,4 @@ main div p, main div li{
     max-width: 100%;
     height: auto;
 }
-
 }
