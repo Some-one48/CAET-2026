@@ -75,34 +75,39 @@ const info = [
     }
 ];
 
-for (item of info){
-    ctx = document.getElementById(item.id).getContext("2d");
-    const grafic = new Chart(ctx, {
+for (const item of info) {
+    const canvasElement = document.getElementById(item.id);
+    if (!canvasElement) continue;
+
+    new Chart(canvasElement, {
         type: 'pie',
         data: {
             labels: item.labels,
             datasets: [{
                 data: item.data,
-                backgroundColor:['#1b7b3d', '#2dc48d', '#b7ff90','#73d6ee','#1a67a5', '#0d3b66',],
-                borderWidth: 0.2,
-                borderColor: '#0a3323',
+                backgroundColor: ['#1b7b3d', '#2dc48d', '#b7ff90', '#73d6ee', '#1a67a5', '#0d3b66'],
+                borderWidth: 1,
+                borderColor: '#ffffff',
             }]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: true,
             plugins: {
                 legend: {
                     position: 'bottom',
                     labels: {
-                        font: { size: 11 }
+                        boxWidth: 14,
+                        padding: 10,
+                        font: { size: 12 }
                     },
                 },
                 title: {
                     display: true,
                     text: item.title,
                     color: '#0a3323',
-                    font: { size: 20 },
-                    padding: { bottom: 5 }
+                    font: { size: 15, weight: 'bold' },
+                    padding: { top: 5, bottom: 12 }
                 }
             }
         }
