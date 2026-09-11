@@ -155,9 +155,14 @@ main div p, main div li{
     text-align: justify;
 }
 
-.grafico {
-    max-width: 40%;
-    margin: 20px;
+/* Container direto do canvas */
+.grafico-card {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 768px){
