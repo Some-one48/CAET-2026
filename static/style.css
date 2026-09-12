@@ -44,49 +44,6 @@ a {
     white-space: nowrap;
 }
 
-#navbar{
-    display: flex;
-    flex-direction: column;
-}
-
-.menu {
-    display: flex;
-    width: 100%;                  
-    background-color: var(--cy); 
-    padding: 10px 20px;           
-    align-items: center;
-    justify-content: flex-end;    
-    column-gap: 20px;
-}
-
-#navbar ul {
-    /* Remova a margin-top e garanta alinhamento à direita */
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap; /* Evita que os itens estourem a tela em resoluções intermediárias */
-}
-
-#navbar li a:hover {
-    background-color: var(--bl);
-    color: var(--wh);
-
-    /*
-    background-color: var(--wh);
-    color: var(--bl);
-    */
-    border-radius: 5px;
-    padding: 3px 14px;
-    transition: 0.3s ease;
-}
-
-#navbar li {
-    font-size: 15px;
-    padding: 0 15px; /* Reduzido de 30px para 15px para não estourar a tela */
-    text-transform: uppercase;
-    display: inline-block;
-}
-
 footer{
     text-align: center;
     background-color: var(--bl);
@@ -131,16 +88,6 @@ main.pagina-video {
     text-align: center;
 }
 
-/*
-ul{
-    list-style-type: none;
-}
-
-li{
-    margin-left: 0;
-    padding: 0;
-}*/
-
 .state{
     text-decoration: none;
 }
@@ -165,26 +112,24 @@ main div p, main div li{
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-@media (max-width: 768px){
+/* APRESENTAÇÃO */
 
-.menu{
-    column-gap: 0; 
-}
-
-#navbar ul{
+#slide {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
 }
 
-#navbar li a:hover {
-    padding: 3px 10px;
+#carouselExampleIndicators {
+    max-width: 60%;
+    border: 1px solid var(--cy);
+    padding: 0;
 }
 
-#navbar li{
-    padding: 0 15px;
+#downloadslide {
+    margin-left: 30px;
 }
+
+@media (max-width: 768px){
 
 #logo .nquebrar{
     white-space: wrap;
@@ -202,5 +147,19 @@ main div p, main div li{
 #video video {
     max-width: 100%;
     height: auto;
+}
+
+/* APRESENTAÇÃO */
+#slide {
+    flex-direction: column;
+}
+
+#carouselExampleIndicators {
+    max-width: 100%;
+}
+
+#downloadslide {
+    margin-left: 0;
+    margin-top: 20px;
 }
 }

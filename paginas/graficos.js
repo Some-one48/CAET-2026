@@ -1,5 +1,3 @@
-let ctx = document.getElementById("genero").getContext("2d");
-
 const info = [
     gen = {
         id: "genero",
