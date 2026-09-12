@@ -131,6 +131,17 @@ main.pagina-video {
     text-align: center;
 }
 
+/* Banner responsivo que não distorce */
+.banner-topo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 30%;    /* Foca mais no teto e corta a parte de baixo */
+    /* ou: object-position: bottom center; (foca no chão) */
+    /* ou: object-position: 50% 30%; (ajuste fino em porcentagem) */
+    display: block;
+}
+
 /*
 ul{
     list-style-type: none;
@@ -155,17 +166,21 @@ main div p, main div li{
     text-align: justify;
 }
 
-/* Container direto do canvas */
+/* Container com a mesma cor do fundo, mas delimitado */
 .grafico-card {
     position: relative;
     width: 100%;
     padding: 15px;
-    background-color: #fff;
+    background-color: var(--wh);                  /* Mesma cor bege/acinzentada do site */
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(10, 51, 35, 0.15);     /* Borda discreta no tom verde do site */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);   /* Sombra suave para dar relevo */
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
+    .banner-topo {
+        height: 180px; /* Fica proporcional e harmonioso no mobile */
+    }
 
 .menu{
     column-gap: 0; 
