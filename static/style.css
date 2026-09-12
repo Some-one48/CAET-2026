@@ -98,8 +98,14 @@ footer .col{
     min-width: 250px;
 }
 
-footer ul{
+footer .row {
+    justify-content: center;
+}
+
+footer ul {
     list-style-type: none;
+    padding-left: 0; /* Remove o recuo padrão do Bootstrap/navegador */
+    margin: 0;
 }
 
 footer li{
